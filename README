@@ -1,0 +1,7 @@
+alarmoo is a cool alarm clock program which launches mplayer at the time you tell it, with the music you tell it
+
+e.g.
+
+alarmoo 07 15 "Wake Up, Lazy Geek - Monosong Ultra.ogg"
+
+To compile it, just type "ooc alarmoo"
