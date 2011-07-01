@@ -34,7 +34,7 @@ main: func (args: ArrayList<String>) {
 	}
 	
 	if(min < 0 || min >= 59) {
-		"Min must be between 0 and 23" println()
+		"Min must be between 0 and 59" println()
 		exit(1)
 	}
 	
