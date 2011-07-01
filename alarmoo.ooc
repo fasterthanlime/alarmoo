@@ -1,4 +1,4 @@
-import structs/[Array, ArrayList], os/Process, os/Time
+import structs/ArrayList, os/Process, os/Time
 
 AlarmClock: class {
 
@@ -9,14 +9,14 @@ AlarmClock: class {
 	}
 
 	ring: func -> Int {
-		SubProcess new(cmd data) execute()
+		Process new(cmd) execute()
 	}
 
 }
 
-main: func (args: Array<String>) {
+main: func (args: ArrayList<String>) {
 
-	if(args size() <= 3) {
+	if(args size <= 3) {
 		printf("Syntax: %s hour min file.mp3 [file2.mp3 ...]\nNote: hour must be in 24H format\n", argv[0])
 		exit(0)
 	}
@@ -25,7 +25,7 @@ main: func (args: Array<String>) {
 	min := args[2] toInt()
 	
 	files := ArrayList<String> new()
-	for(i in 3..args size())
+	for(i in 3..args size)
 		files += args[i]
 	
 	if(hour < 0 || hour >= 24) {
